@@ -1,5 +1,5 @@
-import MultipleAccountsPage from '../src/pages/MultipleAccountsPage'
+import GrowGardenHomePage from '../src/pages/GrowGardenHomePage'
 
 export default function Home() {
-  return <MultipleAccountsPage />
+  return <GrowGardenHomePage />
 }

@@ -6,8 +6,8 @@ const Footer: React.FC = () => (
     <div className="container">
       <div className="row">
         <div className="col col-4">
-          <h3>Multi Run</h3>
-          <p>Run multiple accounts and apps simultaneously on one device with complete data isolation.</p>
+          <h3>Grow Garden</h3>
+          <p>Play garden games online and grow beautiful virtual gardens in your browser.</p>
         </div>
         <div className="col col-4">
           <h3>Products</h3>
@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 Multi Run. All rights reserved.
+        &copy; 2024 Grow Garden. All rights reserved.
       </div>
     </div>
   </footer>

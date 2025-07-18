@@ -95,7 +95,7 @@ const MultipleAccountsPage: React.FC = () => (
             <DownloadButton text="Get Started" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
           </Column>
           <Row >
-          <iframe src="https://html5.gamedistribution.com/cbe4b18acf494513a9dc785210e0c7d7/?gd_sdk_referrer_url=https://growgarden-inky.vercel.app/" width="600" height="800" scrolling="none" frameborder="0"></iframe>
+          <iframe src="https://html5.gamedistribution.com/cbe4b18acf494513a9dc785210e0c7d7/?gd_sdk_referrer_url=https://growgarden-inky.vercel.app/" width="600" height="800"></iframe>
           </Row> 
         </Column>
       </Container>

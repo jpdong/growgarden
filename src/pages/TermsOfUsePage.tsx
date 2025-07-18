@@ -14,7 +14,7 @@ const TermsOfUsePage: React.FC = () => {
             Last updated: July 3, 2025
           </p>
           <p>
-            Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the MultiRun website (the "Service") operated by MultiRun ("us", "we", or "our"). Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
+            Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the Grow Garden gaming website (the "Service") operated by Grow Garden ("us", "we", or "our"). Your access to and use of our gaming Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use our gaming Service.
           </p>
           <p>
             By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
@@ -27,12 +27,12 @@ const TermsOfUsePage: React.FC = () => {
 
           <h2>Intellectual Property</h2>
           <p>
-            The Service and its original content, features, and functionality are and will remain the exclusive property of MultiRun and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of MultiRun.
+            The gaming Service and its original content, features, and functionality are and will remain the exclusive property of Grow Garden and its licensors. The gaming Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Grow Garden.
           </p>
 
           <h2>Links To Other Web Sites</h2>
           <p>
-            Our Service may contain links to third-party web sites or services that are not owned or controlled by MultiRun. MultiRun has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party web sites or services. You further acknowledge and agree that MultiRun shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
+            Our gaming Service may contain links to third-party web sites or services that are not owned or controlled by Grow Garden. Grow Garden has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party web sites or services. You further acknowledge and agree that Grow Garden shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
           </p>
 
           <h2>Changes</h2>

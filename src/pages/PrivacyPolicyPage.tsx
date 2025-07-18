@@ -14,10 +14,10 @@ const PrivacyPolicyPage: React.FC = () => {
             Last updated: July 3, 2025
           </p>
           <p>
-            MultiRun ("us", "we", or "our") operates the MultiRun website (the "Service").
+            Grow Garden ("us", "we", or "our") operates the Grow Garden gaming website (the "Service").
           </p>
           <p>
-            This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy.
+            This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our gaming Service and the choices you have associated with that data. We use your data to provide and improve our online gaming experience. By using the Service, you agree to the collection and use of information in accordance with this policy.
           </p>
 
           <h2>Information Collection and Use</h2>
@@ -46,15 +46,15 @@ const PrivacyPolicyPage: React.FC = () => {
 
           <h2>Use of Data</h2>
           <p>
-            MultiRun uses the collected data for various purposes:
+            Grow Garden uses the collected data for various purposes:
             <ul>
-              <li>To provide and maintain the Service</li>
-              <li>To notify you about changes to our Service</li>
-              <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
-              <li>To provide customer care and support</li>
-              <li>To provide analysis or valuable information so that we can improve the Service</li>
-              <li>To monitor the usage of the Service</li>
-              <li>To detect, prevent and address technical issues</li>
+              <li>To provide and maintain our gaming Service</li>
+              <li>To notify you about changes to our gaming Service</li>
+              <li>To allow you to participate in interactive gaming features when you choose to do so</li>
+              <li>To provide customer care and support for our games</li>
+              <li>To provide analysis or valuable information so that we can improve our gaming experience</li>
+              <li>To monitor the usage of our gaming Service</li>
+              <li>To detect, prevent and address technical issues with our games</li>
             </ul>
           </p>
 

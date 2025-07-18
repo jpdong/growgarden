@@ -1,6 +1,6 @@
 'use client';
 import Script from 'next/script';
-const GA_MEASUREMENT_ID = 'G-74Q8HLBVL9';
+const GA_MEASUREMENT_ID = 'G-NJC5R7FWTN';
 
 export default function GoogleAnalytics() {
 
