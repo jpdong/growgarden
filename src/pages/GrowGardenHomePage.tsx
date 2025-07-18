@@ -32,7 +32,7 @@ const GrowGardenHomePage: React.FC = () => {
               marginBottom: '40px'
             }}>
               <GameIframe
-                src="https://html5.gamedistribution.com/cbe4b18acf494513a9dc785210e0c7d7/?gd_sdk_referrer_url=https://growgarden-inky.vercel.app/"
+                src="https://html5.gamedistribution.com/cbe4b18acf494513a9dc785210e0c7d7/?gd_sdk_referrer_url=https://growgarden.cc/"
                 title={featuredGame.title}
                 className="featured-game-iframe"
               />

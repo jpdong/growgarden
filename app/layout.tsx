@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     icon: '/logo.webp',
   },
   alternates: {
-    canonical: `https://growgarden.space/`,
+    canonical: `https://growgarden.cc/`,
   },
   openGraph: {
     title: 'Grow Garden - Play Garden Games Online',
