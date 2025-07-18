@@ -15,9 +15,6 @@ const NavBar: React.FC = () => (
         <nav>
           <ul className="nav">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/hot-apps">Hot Apps</Link></li>
-            <li><Link href="/hot-games">Hot Games</Link></li>
-            <li><Link href="/technology">Technology</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -28,7 +25,6 @@ const NavBar: React.FC = () => (
           <span></span>
         </label>
 
-        <a href="/#download" className="btn">Download Now</a>
       </div>
     </header>
 

@@ -86,7 +86,7 @@ const MultipleAccountsPage: React.FC = () => (
     <div style={{ background: '#f7f9fb', minHeight: '100vh' }}>
       {/* Hero Section */}
       <Container>
-        <Row gutter={[40, 40]} align="middle" style={{ padding: '80px 0 40px 0' }}>
+        <Column>
           <Column xs={24} md={12}>
             <h1 style={{ fontSize: '2.5rem', marginBottom: 20, color: '#2c3e50' }}>Run Multiple Accounts on One Device with Multi Run App</h1>
             <p style={{ fontSize: '1.1rem', marginBottom: 30, color: '#666' }}>
@@ -94,15 +94,15 @@ const MultipleAccountsPage: React.FC = () => (
             </p>
             <DownloadButton text="Get Started" href="https://play.google.com/store/apps/details?id=com.dong.multirun" />
           </Column>
-          <Column xs={24} md={12} style={{ textAlign: 'center' }}>
-            <img src="/multi_title_image.webp" alt="Multi Run with Multiple Accounts" style={{ maxWidth: '100%', height: 'auto', borderRadius: 10, boxShadow: '0 4px 16px rgba(52,152,219,0.08)' }} />
-          </Column>
-        </Row>
+          <Row >
+          <iframe src="https://html5.gamedistribution.com/cbe4b18acf494513a9dc785210e0c7d7/?gd_sdk_referrer_url=https://growgarden-inky.vercel.app/" width="600" height="800" scrolling="none" frameborder="0"></iframe>
+          </Row> 
+        </Column>
       </Container>
       {/* Features Section */}
       <div style={{ background: '#f9f9f9', padding: '80px 0' }} id="features">
         <Container>
-          <SectionTitle>Powerful Features of Multi Run</SectionTitle>
+          <SectionTitle>More Garden Games</SectionTitle>
           <Row gutter={[30, 30]}>
             {features.map(f => (
               <Column xs={24} md={12} lg={6} key={f.title}>
@@ -112,14 +112,7 @@ const MultipleAccountsPage: React.FC = () => (
           </Row>
         </Container>
       </div>
-      {/* Download Section */}
-      <div style={{ padding: '80px 0', textAlign: 'center' }} id="download">
-        <Container>
-          <SectionTitle>Download Multi Run</SectionTitle>
-          <p>Available on all major platforms. Get started today!</p>
-          <DownloadButton text="Google Play" href="https://play.google.com/store/apps/details?id=com.dong.multirun" icon={<FaGooglePlay />} />
-        </Container>
-      </div>
+      
       {/* FAQ Section */}
       <div style={{ background: '#fff', padding: '80px 0' }} id="faq">
         <Container>

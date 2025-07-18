@@ -4,14 +4,10 @@ import GoogleAnalytics from '../src/components/analytics/GoogleAnalytics'
 import CookieConsent from '../src/components/analytics/CookieConsent'
 
 export const metadata: Metadata = {
-  title: 'Multi Run - Parallel Dual App',
+  title: 'Grow Garden',
   description: 'Multi Run​​ is a powerful tool that allows you to run multiple accounts or applications simultaneously on a single device.',
-  keywords: 'Multi Run,Parallel Space,Dual App,Multiple Accounts,Cloner,Virtual',
   icons: {
     icon: '/logo.webp',
-  },
-  other: {
-    "saashub-verification":"8myrsab5uhvd"
   },
   alternates: {
       canonical: `https://multirun.space/`,
