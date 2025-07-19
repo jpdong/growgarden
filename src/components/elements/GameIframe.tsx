@@ -37,6 +37,8 @@ const GameIframe: React.FC<GameIframeProps> = ({
 
   // 模拟键盘事件发送到iframe
   const sendKeyEvent = (key: string, type: 'keydown' | 'keyup') => {
+    console.log("sendKeyEvent")
+    console.log(iframeRef.current?.contentWindow)
     if (!iframeRef.current?.contentWindow) return;
 
     try {
@@ -60,9 +62,9 @@ const GameIframe: React.FC<GameIframeProps> = ({
       }, '*');
 
       // 也尝试直接在iframe的document上触发事件
-      if (iframeRef.current.contentDocument) {
-        iframeRef.current.contentDocument.dispatchEvent(keyEvent);
-      }
+      // if (iframeRef.current.contentDocument) {
+      //   iframeRef.current.contentDocument.dispatchEvent(keyEvent);
+      // }
     } catch (error) {
       console.log('Key event simulation failed:', error);
     }

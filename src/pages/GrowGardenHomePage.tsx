@@ -110,7 +110,8 @@ const GrowGardenHomePage: React.FC = () => {
               marginBottom: '40px'
             }}>
               <GameIframe
-                src="https://growgarden.cc/game/growgarden.html"
+                src="https://growgarden.cc/game/growgarden20250720.html"
+              
                 title={featuredGame.title}
                 className="featured-game-iframe"
               />
