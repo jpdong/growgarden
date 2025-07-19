@@ -12,6 +12,7 @@ export const featuredGame: Game = {
   category: GameCategory.GARDEN,
   tags: ['gardening', 'relaxing', 'simulation', 'plants', 'nature'],
   featured: true,
+  thumbnailUrl:"",
   seoSlug: 'grow-garden',
   metaDescription: 'Play Grow Garden online - a relaxing gardening simulation game where you plant, grow, and manage your own beautiful virtual garden.',
 };
