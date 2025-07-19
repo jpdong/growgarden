@@ -12,7 +12,7 @@ const Footer: React.FC = () => (
         <div className="col col-4">
           <h3>Products</h3>
           <ul>
-            <li><Link href="/">Download</Link></li>
+            <li><Link href="/">Play</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 Grow Garden. All rights reserved.
+        &copy; 2025 Grow Garden. All rights reserved.
       </div>
     </div>
   </footer>

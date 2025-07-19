@@ -16,14 +16,7 @@ const GrowGardenHomePage: React.FC = () => {
         {/* Hero Section with Featured Game */}
         <div className="featured-game-section">
           <Container>
-            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-              <h1 className="featured-game-title">
-                {featuredGame.title}
-              </h1>
-              <p className="featured-game-description">
-                {featuredGame.longDescription || featuredGame.description}
-              </p>
-            </div>
+           
             
             {/* Centered Game Iframe */}
             <div style={{ 
@@ -32,39 +25,22 @@ const GrowGardenHomePage: React.FC = () => {
               marginBottom: '40px'
             }}>
               <GameIframe
-                src="https://html5.gamedistribution.com/cbe4b18acf494513a9dc785210e0c7d7/?gd_sdk_referrer_url=https://growgarden.cc/"
+                src="https://growgarden.cc/game/growgarden.html"
                 title={featuredGame.title}
                 className="featured-game-iframe"
               />
             </div>
-
-            {/* Game Instructions */}
-            {featuredGame.instructions && (
-              <div className="game-instructions-card">
-                <h3 style={{ 
-                  color: '#2c3e50', 
-                  marginBottom: '16px',
-                  fontSize: '1.25rem'
-                }}>
-                  How to Play
-                </h3>
-                <ul style={{ 
-                  color: '#666', 
-                  lineHeight: '1.6',
-                  paddingLeft: '20px'
-                }}>
-                  {featuredGame.instructions.map((instruction, index) => (
-                    <li key={index} style={{ marginBottom: '8px' }}>
-                      {instruction}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </Container>
         </div>
-
-        {/* More Garden Games Section */}
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <h1 className="featured-game-title">
+                {featuredGame.title}
+              </h1>
+              <h2 className="featured-game-description">
+                {featuredGame.longDescription || featuredGame.description}
+              </h2>
+            </div>
+        {/* More Garden Games Section
         <div className="games-section" style={{ 
           background: '#fff', 
           padding: '80px 0',
@@ -83,7 +59,7 @@ const GrowGardenHomePage: React.FC = () => {
               ))}
             </div>
           </Container>
-        </div>
+        </div> */}
 
         {/* Additional SEO Content Section */}
         <div className="seo-content-section">
