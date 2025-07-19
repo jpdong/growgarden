@@ -44,9 +44,6 @@ const NavBar: React.FC = () => (
       </div>
       <ul>
         <li><Link href="/">Home</Link></li>
-        <li><Link href="/hot-apps">Hot Apps</Link></li>
-        <li><Link href="/hot-games">Hot Games</Link></li>
-        <li><Link href="/technology">Technology</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
     </nav>
