@@ -154,7 +154,7 @@ const GameIframe: React.FC<GameIframeProps> = ({
         {/* Error state */}
         <div style={errorStyle}>
           <div style={{ fontSize: '48px', marginBottom: '8px' }}>🎮</div>
-          <h3 style={{ margin: '0 0 8px 0', color: '#333' }}>Game Loading Error</h3>
+          <p style={{ margin: '0 0 8px 0', color: '#333' }}>Game Loading Error</p>
           <p style={{ margin: '0 0 16px 0', maxWidth: '300px' }}>
             Sorry, we couldn't load the game. Please check your internet connection and try again.
           </p>
