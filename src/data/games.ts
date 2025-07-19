@@ -8,25 +8,12 @@ export const featuredGame: Game = {
   title: 'Grow Garden',
   description: 'Plant, grow, and manage your beautiful garden in this relaxing gardening game.',
   longDescription: 'Experience the joy of gardening with Grow Garden! Plant seeds, water your plants, and watch your garden bloom into a beautiful paradise. This relaxing game lets you create your own virtual garden sanctuary.',
-  iframeUrl: 'https://html5.gamedistribution.com/rvvASMiM/fd8e0b5b8b8e4c4e8f8e8e8e8e8e8e8e/index.html',
-  thumbnailUrl: '/multi_title_image.webp',
+  iframeUrl: 'https://growgarden.cc/game/growgarden.html',
   category: GameCategory.GARDEN,
   tags: ['gardening', 'relaxing', 'simulation', 'plants', 'nature'],
   featured: true,
   seoSlug: 'grow-garden',
   metaDescription: 'Play Grow Garden online - a relaxing gardening simulation game where you plant, grow, and manage your own beautiful virtual garden.',
-  instructions: [
-    'Click to plant seeds in empty soil',
-    'Water your plants regularly to help them grow',
-    'Harvest mature plants for rewards',
-    'Use rewards to buy new seeds and decorations',
-    'Create your perfect garden layout'
-  ],
-  controls: [
-    'Mouse: Click to interact with plants and tools',
-    'Drag: Move items and decorations around your garden',
-    'Scroll: Zoom in and out of your garden view'
-  ]
 };
 
 /**
@@ -91,7 +78,7 @@ export const moreGardenGames: Game[] = [
     description: 'Design and decorate beautiful garden landscapes.',
     longDescription: 'Unleash your creativity with Garden Design! Plan layouts, choose plants, add decorations, and create stunning garden landscapes that reflect your personal style.',
     iframeUrl: 'https://html5.gamedistribution.com/garden-design/index.html',
-    thumbnailUrl: '/logo.webp',
+    thumbnailUrl: '/logo512.png',
     category: GameCategory.CASUAL,
     tags: ['design', 'decoration', 'landscape', 'creative', 'planning'],
     featured: false,

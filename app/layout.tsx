@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Play Grow Garden and more garden games online. Free browser games about gardening, planting, and growing beautiful gardens.',
   keywords: ['garden games', 'plant games', 'gardening online', 'grow garden', 'flower games', 'free online games'],
   icons: {
-    icon: '/logo.webp',
+    icon: '/logo128.png',
   },
   alternates: {
     canonical: `https://growgarden.cc/`,

@@ -8,7 +8,7 @@ const NavBar: React.FC = () => (
     <header className="header">
       <div className="header-content">
         <Link href="/" className="logo">
-          <img src="/logo.webp" alt="Grow Garden Logo" />
+          <img src="/logo512.png" alt="Grow Garden Logo" />
           <span className="logo-text">Grow Garden</span>
         </Link>
         
@@ -35,7 +35,7 @@ const NavBar: React.FC = () => (
     <nav className="mobile-nav">
       <div className="mobile-nav-header">
         <Link href="/" className="logo">
-          <img src="/logo.webp" alt="Grow Garden Logo" width="32" height="32" />
+          <img src="/logo512.png" alt="Grow Garden Logo" width="32" height="32" />
           <span className="logo-text">Grow Garden</span>
         </Link>
         <label htmlFor="mobile-menu-toggle" className="mobile-nav-close" aria-label="Close mobile menu">
