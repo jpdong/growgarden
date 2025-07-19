@@ -1,0 +1,6 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Small seed in soil -->
+  <ellipse cx="32" cy="45" rx="4" ry="3" fill="#8B4513"/>
+  <ellipse cx="32" cy="44" rx="2" ry="1.5" fill="#654321"/>
+</svg>

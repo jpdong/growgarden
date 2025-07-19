@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Garden Game</title>
+    <link rel="stylesheet" href="styles/game.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading-screen">
+            <div class="loading-spinner"></div>
+            <p>加载中...</p>
+        </div>
+        
+        <div id="game-content" style="display: none;">
+            <div id="game-header">
+                <div id="game-info">
+                    <div class="info-group">
+                        <span id="score">积分: 0</span>
+                        <span id="plants-count">植物: 0</span>
+                        <span id="harvest-count">收获: 0</span>
+                    </div>
+                    <div class="info-group">
+                        <span id="game-time">时间: 00:00</span>
+                        <span id="level-info">等级: 1</span>
+                    </div>
+                </div>
+                <div id="game-status">
+                    <span id="current-tool">当前工具: 种植</span>
+                    <span id="selected-plant">选择植物: 花朵</span>
+                </div>
+            </div>
+            
+            <div id="game-main">
+                <canvas id="game-canvas"></canvas>
+            </div>
+            
+            <div id="game-toolbar">
+                <div id="tool-buttons">
+                    <button id="plant-tool" class="tool-btn active" data-tool="plant">
+                        <span class="tool-icon">🌱</span>
+                        <span class="tool-label">种植</span>
+                    </button>
+                    <button id="water-tool" class="tool-btn" data-tool="water">
+                        <span class="tool-icon">💧</span>
+                        <span class="tool-label">浇水</span>
+                    </button>
+                    <button id="harvest-tool" class="tool-btn" data-tool="harvest">
+                        <span class="tool-icon">🌾</span>
+                        <span class="tool-label">收获</span>
+                    </button>
+                </div>
+                
+                <div id="plant-selector" class="plant-selector">
+                    <button class="plant-btn active" data-plant="flower">
+                        <span class="plant-icon">🌸</span>
+                        <span class="plant-label">花朵</span>
+                    </button>
+                    <button class="plant-btn" data-plant="vegetable">
+                        <span class="plant-icon">🥕</span>
+                        <span class="plant-label">蔬菜</span>
+                    </button>
+                    <button class="plant-btn" data-plant="tree">
+                        <span class="plant-icon">🌳</span>
+                        <span class="plant-label">树木</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="error-screen" style="display: none;">
+            <div class="error-message">
+                <h3>游戏加载失败</h3>
+                <p>请刷新页面重试</p>
+                <button id="retry-btn">重试</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 游戏引擎脚本 -->
+    <script src="engine/AssetManager.js"></script>
+    <script src="engine/LoadingManager.js"></script>
+    <script src="entities/Plant.js"></script>
+    <script src="entities/Garden.js"></script>
+    <script src="engine/StateManager.js"></script>
+    <script src="engine/AnimationSystem.js"></script>
+    <script>
+        // Debug: Check if classes are loaded
+        console.log('AssetManager:', typeof AssetManager);
+        console.log('LoadingManager:', typeof LoadingManager);
+        console.log('Plant:', typeof Plant);
+        console.log('GardenGrid:', typeof GardenGrid);
+        console.log('GameState:', typeof GameState);
+        console.log('AnimationSystem:', typeof AnimationSystem);
+    </script>
+    <script src="engine/Renderer.js"></script>
+    <script>
+        // Debug: Check if Renderer is loaded
+        console.log('Renderer:', typeof Renderer);
+    </script>
+    <script src="engine/InputHandler.js"></script>
+    <script src="engine/GameEngine.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

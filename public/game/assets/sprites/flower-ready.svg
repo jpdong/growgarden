@@ -1,0 +1,23 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Full grown flower ready for harvest -->
+  <line x1="32" y1="50" x2="32" y2="20" stroke="#4CAF50" stroke-width="3"/>
+  <ellipse cx="24" cy="35" rx="5" ry="7" fill="#66BB6A"/>
+  <ellipse cx="40" cy="35" rx="5" ry="7" fill="#66BB6A"/>
+  <ellipse cx="20" cy="42" rx="4" ry="6" fill="#81C784"/>
+  <ellipse cx="44" cy="42" rx="4" ry="6" fill="#81C784"/>
+  <!-- Beautiful flower -->
+  <g transform="translate(32,20)">
+    <circle cx="0" cy="0" r="6" fill="#E91E63"/>
+    <circle cx="-4" cy="-2" r="3" fill="#F06292"/>
+    <circle cx="4" cy="-2" r="3" fill="#F06292"/>
+    <circle cx="-2" cy="4" r="3" fill="#F06292"/>
+    <circle cx="2" cy="4" r="3" fill="#F06292"/>
+    <circle cx="0" cy="0" r="2" fill="#FFD54F"/>
+  </g>
+  <!-- Sparkle effect -->
+  <g opacity="0.8">
+    <path d="M20,15 L22,17 L20,19 L18,17 Z" fill="#FFEB3B"/>
+    <path d="M44,25 L46,27 L44,29 L42,27 Z" fill="#FFEB3B"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Simple UI background pattern -->
+  <rect width="64" height="64" fill="#F5F5F5" opacity="0.9"/>
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+  <pattern id="dots" patternUnits="userSpaceOnUse" width="8" height="8">
+    <circle cx="4" cy="4" r="0.5" fill="#E0E0E0" opacity="0.5"/>
+  </pattern>
+  <rect width="64" height="64" fill="url(#dots)"/>
+</svg>

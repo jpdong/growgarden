@@ -1,0 +1,6 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Vegetable seed in soil -->
+  <ellipse cx="32" cy="45" rx="3" ry="2" fill="#8B4513"/>
+  <ellipse cx="32" cy="44" rx="1.5" ry="1" fill="#A0522D"/>
+</svg>

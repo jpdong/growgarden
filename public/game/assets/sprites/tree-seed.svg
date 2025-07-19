@@ -1,0 +1,7 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Tree seed/acorn in soil -->
+  <ellipse cx="32" cy="45" rx="4" ry="3" fill="#8B4513"/>
+  <ellipse cx="32" cy="43" rx="2.5" ry="2" fill="#A0522D"/>
+  <path d="M32,41 Q30,39 32,37 Q34,39 32,41" fill="#654321"/>
+</svg>

@@ -91,7 +91,7 @@ export const moreGardenGames: Game[] = [
     description: 'Design and decorate beautiful garden landscapes.',
     longDescription: 'Unleash your creativity with Garden Design! Plan layouts, choose plants, add decorations, and create stunning garden landscapes that reflect your personal style.',
     iframeUrl: 'https://html5.gamedistribution.com/garden-design/index.html',
-    thumbnailUrl: '/logo.webp',
+    thumbnailUrl: '/logo512.png',
     category: GameCategory.CASUAL,
     tags: ['design', 'decoration', 'landscape', 'creative', 'planning'],
     featured: false,

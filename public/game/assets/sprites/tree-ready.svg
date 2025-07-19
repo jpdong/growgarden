@@ -1,0 +1,21 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Full grown tree ready for harvest -->
+  <line x1="32" y1="50" x2="32" y2="15" stroke="#795548" stroke-width="4"/>
+  <circle cx="32" cy="20" r="15" fill="#4CAF50"/>
+  <circle cx="20" cy="25" r="8" fill="#66BB6A"/>
+  <circle cx="44" cy="25" r="8" fill="#66BB6A"/>
+  <circle cx="25" cy="35" r="7" fill="#81C784"/>
+  <circle cx="39" cy="35" r="7" fill="#81C784"/>
+  <circle cx="32" cy="28" r="6" fill="#A5D6A7"/>
+  <!-- Fruits -->
+  <circle cx="25" cy="22" r="2" fill="#F44336"/>
+  <circle cx="38" cy="26" r="2" fill="#F44336"/>
+  <circle cx="30" cy="32" r="2" fill="#F44336"/>
+  <circle cx="42" cy="32" r="2" fill="#F44336"/>
+  <!-- Sparkle effect -->
+  <g opacity="0.8">
+    <path d="M18,18 L20,20 L18,22 L16,20 Z" fill="#FFEB3B"/>
+    <path d="M46,28 L48,30 L46,32 L44,30 Z" fill="#FFEB3B"/>
+  </g>
+</svg>

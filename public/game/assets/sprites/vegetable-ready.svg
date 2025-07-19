@@ -1,0 +1,18 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Ready to harvest carrot -->
+  <line x1="32" y1="45" x2="32" y2="20" stroke="#388E3C" stroke-width="3"/>
+  <ellipse cx="25" cy="30" rx="4" ry="6" fill="#4CAF50"/>
+  <ellipse cx="39" cy="30" rx="4" ry="6" fill="#4CAF50"/>
+  <ellipse cx="21" cy="37" rx="3" ry="5" fill="#66BB6A"/>
+  <ellipse cx="43" cy="37" rx="3" ry="5" fill="#66BB6A"/>
+  <!-- Full grown carrot -->
+  <ellipse cx="32" cy="50" rx="4" ry="10" fill="#FF9800"/>
+  <path d="M32,40 Q29,43 32,46 Q35,43 32,40" fill="#FF5722"/>
+  <path d="M32,46 Q30,49 32,52 Q34,49 32,46" fill="#FF5722"/>
+  <!-- Sparkle effect -->
+  <g opacity="0.8">
+    <path d="M22,25 L24,27 L22,29 L20,27 Z" fill="#FFEB3B"/>
+    <path d="M42,35 L44,37 L42,39 L40,37 Z" fill="#FFEB3B"/>
+  </g>
+</svg>

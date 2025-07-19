@@ -1,0 +1,11 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Growing plant with stem and leaves -->
+  <line x1="32" y1="50" x2="32" y2="25" stroke="#4CAF50" stroke-width="3"/>
+  <ellipse cx="25" cy="35" rx="4" ry="6" fill="#66BB6A"/>
+  <ellipse cx="39" cy="35" rx="4" ry="6" fill="#66BB6A"/>
+  <ellipse cx="22" cy="42" rx="3" ry="5" fill="#81C784"/>
+  <ellipse cx="42" cy="42" rx="3" ry="5" fill="#81C784"/>
+  <!-- Small bud -->
+  <circle cx="32" cy="25" r="3" fill="#C8E6C9"/>
+</svg>

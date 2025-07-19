@@ -1,0 +1,13 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Harvest basket -->
+  <ellipse cx="32" cy="45" rx="15" ry="8" fill="#8D6E63"/>
+  <ellipse cx="32" cy="43" rx="13" ry="6" fill="#A1887F"/>
+  <path d="M17,43 Q17,35 32,35 Q47,35 47,43" fill="none" stroke="#6D4C41" stroke-width="2"/>
+  <path d="M20,40 Q20,38 24,38 Q28,38 28,40" fill="none" stroke="#6D4C41" stroke-width="1"/>
+  <path d="M36,40 Q36,38 40,38 Q44,38 44,40" fill="none" stroke="#6D4C41" stroke-width="1"/>
+  <!-- Harvested items in basket -->
+  <circle cx="28" cy="42" r="2" fill="#F44336"/>
+  <ellipse cx="36" cy="41" rx="2" ry="3" fill="#FF9800"/>
+  <circle cx="32" cy="44" r="1.5" fill="#4CAF50"/>
+</svg>

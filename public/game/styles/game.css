@@ -1,0 +1,921 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+    overflow: hidden;
+    user-select: none;
+}
+
+/* 游戏容器 */
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* 加载屏幕 */
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading-screen p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 加载进度条样式 */
+.progress-container {
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+    animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-bar.complete .progress-fill {
+    background: linear-gradient(90deg, #4CAF50 0%, #66BB6A 50%, #4CAF50 100%);
+    animation: progressComplete 0.5s ease-out;
+}
+
+@keyframes progressComplete {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(1.2); }
+    100% { transform: scaleY(1); }
+}
+
+.progress-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 4px;
+}
+
+.status-text {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    max-width: 280px;
+    word-wrap: break-word;
+}
+
+/* 游戏内容区域 */
+#game-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 游戏头部信息 */
+#game-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 20px;
+    border-bottom: 2px solid #4CAF50;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.info-group {
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+    color: #2E7D32;
+}
+
+.info-group span {
+    font-size: 14px;
+    padding: 4px 8px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+#game-status {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+#game-status span {
+    padding: 2px 6px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+/* 游戏主区域 */
+#game-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 0;
+}
+
+#game-canvas {
+    border: 3px solid #4CAF50;
+    border-radius: 12px;
+    background: #8B4513;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 工具栏 */
+#game-toolbar {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 16px 20px;
+    border-top: 2px solid #4CAF50;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+#tool-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.tool-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 80px;
+}
+
+.tool-btn:hover {
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tool-btn.active {
+    border-color: #4CAF50;
+    background: #E8F5E8;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.tool-btn.tool-selected {
+    animation: toolSelect 0.2s ease-out;
+}
+
+@keyframes toolSelect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.tool-icon {
+    font-size: 24px;
+}
+
+.tool-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 植物选择器 */
+.plant-selector {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.plant-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 60px;
+}
+
+.plant-btn:hover {
+    border-color: #FF9800;
+    transform: translateY(-1px);
+}
+
+.plant-btn.active {
+    border-color: #FF9800;
+    background: #FFF3E0;
+}
+
+.plant-icon {
+    font-size: 20px;
+}
+
+.plant-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 错误屏幕 */
+#error-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.error-message {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.error-message h3 {
+    color: #d32f2f;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.error-message p {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+#retry-btn {
+    padding: 12px 24px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+#retry-btn:hover {
+    background: #45a049;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #game-header {
+        padding: 8px 16px;
+    }
+    
+    #game-info {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 6px;
+    }
+    
+    .info-group {
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    .info-group span {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    
+    #game-status {
+        gap: 12px;
+        font-size: 11px;
+        justify-content: center;
+    }
+    
+    #game-main {
+        padding: 12px;
+    }
+    
+    #game-toolbar {
+        padding: 12px 16px;
+        gap: 8px;
+    }
+    
+    #tool-buttons {
+        gap: 8px;
+    }
+    
+    .tool-btn {
+        padding: 8px 12px;
+        min-width: 70px;
+    }
+    
+    .tool-icon {
+        font-size: 20px;
+    }
+    
+    .tool-label {
+        font-size: 11px;
+    }
+    
+    .plant-btn {
+        padding: 6px 8px;
+        min-width: 50px;
+    }
+    
+    .plant-icon {
+        font-size: 18px;
+    }
+    
+    .plant-label {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    #game-header {
+        padding: 6px 12px;
+    }
+    
+    .info-group {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    
+    .info-group span {
+        font-size: 11px;
+        padding: 2px 4px;
+    }
+    
+    #game-status {
+        gap: 8px;
+        font-size: 10px;
+        flex-wrap: wrap;
+    }
+    
+    #game-main {
+        padding: 8px;
+    }
+    
+    #game-toolbar {
+        padding: 8px 12px;
+    }
+    
+    .tool-btn {
+        padding: 6px 8px;
+        min-width: 60px;
+    }
+    
+    .tool-icon {
+        font-size: 18px;
+    }
+    
+    .tool-label {
+        font-size: 10px;
+    }
+    
+    .plant-btn {
+        padding: 4px 6px;
+        min-width: 45px;
+    }
+    
+    .plant-icon {
+        font-size: 16px;
+    }
+    
+    .plant-label {
+        font-size: 8px;
+    }
+}
+
+/* 高DPI屏幕支持 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #game-canvas {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    .tool-btn, .plant-btn {
+        padding: 12px 16px;
+    }
+    
+    .tool-btn:active, .plant-btn:active {
+        transform: scale(0.95);
+    }
+}
+/* 收获动
+画效果 */
+@keyframes rewardFloat {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-30px) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-60px) scale(0.8);
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--end-x, 0), var(--end-y, 0)) scale(0.3);
+    }
+}
+
+@keyframes plantingPop {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes wateringDrop {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -100%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 0) scale(0.8);
+    }
+}
+
+@keyframes feedbackSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+/* 动画元素样式 */
+.reward-animation {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+}
+
+.harvest-particle {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+.planting-effect {
+    transform: translate(-50%, -50%);
+}
+
+.watering-effect {
+    transform: translate(-50%, -50%);
+}
+
+.action-feedback {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+}
+
+/* 收获指示器增强 */
+.harvest-indicator {
+    animation: harvestPulse 2s ease-in-out infinite;
+}
+
+@keyframes harvestPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* 植物闪烁效果增强 */
+.ready-plant {
+    animation: readyGlow 3s ease-in-out infinite;
+}
+
+@keyframes readyGlow {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.3) drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+    }
+}
+
+/* 植物成长动画 */
+@keyframes plantGrowth {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.plant-growing {
+    animation: plantGrowth 1.5s ease-out;
+}
+
+/* 土壤湿润动画 */
+@keyframes soilMoisture {
+    0% {
+        background-color: #8B4513;
+    }
+    50% {
+        background-color: #654321;
+    }
+    100% {
+        background-color: #5D4037;
+    }
+}
+
+.soil-watered {
+    animation: soilMoisture 2s ease-out;
+}
+
+/* 工具选择动画增强 */
+@keyframes toolSelectEnhanced {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+    }
+    25% { 
+        transform: scale(1.05); 
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5);
+    }
+    50% { 
+        transform: scale(1.1); 
+        box-shadow: 0 6px 16px rgba(76, 175, 80, 0.7);
+    }
+    75% { 
+        transform: scale(1.05); 
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5);
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+    }
+}
+
+.tool-btn.tool-selected-enhanced {
+    animation: toolSelectEnhanced 0.4s ease-out;
+}
+
+/* 植物按钮选择动画 */
+@keyframes plantSelectBounce {
+    0% { 
+        transform: scale(1); 
+    }
+    30% { 
+        transform: scale(1.15); 
+    }
+    60% { 
+        transform: scale(0.95); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
+
+.plant-btn.plant-selected {
+    animation: plantSelectBounce 0.3s ease-out;
+}
+
+/* 成功操作闪光效果 */
+@keyframes successFlash {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(76, 175, 80, 0.3);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.success-flash {
+    animation: successFlash 0.6s ease-out;
+}
+
+/* 错误操作震动效果 */
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.error-shake {
+    animation: errorShake 0.5s ease-out;
+}
+
+/* 浇水波纹效果 */
+@keyframes waterRipple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.water-ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2196F3;
+    border-radius: 50%;
+    animation: waterRipple 1s ease-out;
+    pointer-events: none;
+}
+
+/* 种植土壤效果 */
+@keyframes soilDig {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(0.95);
+        filter: brightness(0.8);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(1.1);
+    }
+}
+
+.soil-dig {
+    animation: soilDig 0.8s ease-out;
+}
+
+/* 收获爆炸效果 */
+@keyframes harvestBurst {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.harvest-burst {
+    animation: harvestBurst 0.8s ease-out;
+}
+
+/* 积分增加动画 */
+@keyframes scoreIncrease {
+    0% {
+        transform: scale(1);
+        color: #2E7D32;
+    }
+    50% {
+        transform: scale(1.2);
+        color: #FFD700;
+    }
+    100% {
+        transform: scale(1);
+        color: #2E7D32;
+    }
+}
+
+.score-increase {
+    animation: scoreIncrease 0.6s ease-out;
+}
+
+/* 等级提升动画 */
+@keyframes levelUp {
+    0% {
+        transform: scale(1);
+        color: #2E7D32;
+        text-shadow: none;
+    }
+    25% {
+        transform: scale(1.3);
+        color: #FF9800;
+        text-shadow: 0 0 10px rgba(255, 152, 0, 0.8);
+    }
+    50% {
+        transform: scale(1.1);
+        color: #FFD700;
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+    }
+    75% {
+        transform: scale(1.2);
+        color: #FF9800;
+        text-shadow: 0 0 10px rgba(255, 152, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        color: #2E7D32;
+        text-shadow: none;
+    }
+}
+
+.level-up {
+    animation: levelUp 1.5s ease-out;
+}
+
+/* 游戏时间脉冲效果 */
+@keyframes timePulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.time-pulse {
+    animation: timePulse 2s ease-in-out infinite;
+}
+
+/* 植物需要照料提示 */
+@keyframes needsCare {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(0.7) sepia(0.3);
+    }
+}
+
+.plant-needs-care {
+    animation: needsCare 2s ease-in-out infinite;
+}
+
+/* 工具提示动画 */
+@keyframes tooltipFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tooltip {
+    animation: tooltipFadeIn 0.3s ease-out;
+}
+
+/* 加载动画增强 */
+@keyframes spinEnhanced {
+    0% { 
+        transform: rotate(0deg); 
+        border-top-color: #4CAF50;
+    }
+    25% { 
+        border-top-color: #2196F3;
+    }
+    50% { 
+        transform: rotate(180deg); 
+        border-top-color: #FF9800;
+    }
+    75% { 
+        border-top-color: #9C27B0;
+    }
+    100% { 
+        transform: rotate(360deg); 
+        border-top-color: #4CAF50;
+    }
+}
+
+.loading-spinner.enhanced {
+    animation: spinEnhanced 2s linear infinite;
+}

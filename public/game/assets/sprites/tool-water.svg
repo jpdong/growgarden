@@ -1,0 +1,13 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="transparent"/>
+  <!-- Watering can -->
+  <ellipse cx="32" cy="40" rx="12" ry="8" fill="#4FC3F7"/>
+  <ellipse cx="32" cy="38" rx="10" ry="6" fill="#81D4FA"/>
+  <rect x="28" y="32" width="8" height="4" fill="#29B6F6"/>
+  <path d="M44,35 Q50,30 52,35 Q50,40 44,38" fill="#4FC3F7"/>
+  <circle cx="48" cy="35" r="1" fill="#0277BD"/>
+  <!-- Water drops -->
+  <circle cx="25" cy="50" r="1.5" fill="#4FC3F7" opacity="0.8"/>
+  <circle cx="32" cy="52" r="1" fill="#4FC3F7" opacity="0.8"/>
+  <circle cx="39" cy="50" r="1.2" fill="#4FC3F7" opacity="0.8"/>
+</svg>
