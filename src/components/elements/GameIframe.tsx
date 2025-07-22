@@ -15,25 +15,9 @@ const GameIframe: React.FC<GameIframeProps> = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [showControls, setShowControls] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  // 检测是否为移动设备
-  useEffect(() => {
-    const checkMobile = () => {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const mobileKeywords = ['mobile', 'android', 'iphone', 'ipad', 'tablet'];
-      const isMobileDevice = mobileKeywords.some(keyword => userAgent.includes(keyword)) ||
-        window.innerWidth <= 768;
-      setIsMobile(isMobileDevice);
-      setShowControls(isMobileDevice);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   // 模拟键盘事件发送到iframe
   const sendKeyEvent = (key: string, type: 'keydown' | 'keyup') => {
@@ -369,7 +353,7 @@ const GameIframe: React.FC<GameIframeProps> = ({
         </div>
 
         {/* Virtual Controls for Mobile - Below the game */}
-        {showControls && !isLoading && !hasError && (
+        {!isLoading && !hasError && (
           <div style={{
             display: 'flex',
             justifyContent: 'space-between',
