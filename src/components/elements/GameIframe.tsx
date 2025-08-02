@@ -131,7 +131,7 @@ const GameIframe = forwardRef<GameIframeRef, GameIframeProps>(({
           @media (max-width: 768px) {
             .game-iframe-container {
               max-width: 100%;
-              aspect-ratio: 3/4;
+              aspect-ratio: 4/3;
             }
           }
           
