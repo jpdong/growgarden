@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../components/elements/NavBar';
 import Footer from '../components/elements/Footer';
 import SectionTitle from '../components/elements/SectionTitle';
-import GameIframe from '../components/elements/GameIframe';
+import GameWithControls from '../components/elements/GameWithControls';
 import Container from '../components/layout/Container';
 import { featuredGame } from '../data/games';
 
@@ -109,12 +109,87 @@ const GrowGardenHomePage: React.FC = () => {
               justifyContent: 'center',
               marginBottom: '40px'
             }}>
-              <GameIframe
+              <GameWithControls
                 src="https://growgarden.cc/game/growgarden20250720.html"
-              
                 title={featuredGame.title}
                 className="featured-game-iframe"
+                showControls={true}
               />
+            </div>
+          </Container>
+        </div>
+        {/* More Games Section */}
+        <div className="more-games-section" style={{
+          background: '#fff',
+          padding: '80px 0',
+          borderTop: '1px solid #e0e0e0'
+        }}>
+          <Container>
+            <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+              <h2 style={{
+                fontSize: '2.5rem',
+                color: '#2c3e50',
+                marginBottom: '16px',
+                fontWeight: 'bold'
+              }}>
+                More Farming Games
+              </h2>
+              <p style={{
+                fontSize: '1.1rem',
+                color: '#666',
+                maxWidth: '600px',
+                margin: '0 auto'
+              }}>
+                Explore our collection of farming and gardening games
+              </p>
+            </div>
+
+            {/* Farming Life Game Card */}
+            <div style={{
+              maxWidth: '600px',
+              margin: '0 auto',
+              background: '#f8f9fa',
+              borderRadius: '12px',
+              padding: '40px',
+              textAlign: 'center',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+              border: '2px solid #e9ecef'
+            }}>
+              <div style={{ fontSize: '4rem', marginBottom: '20px' }}>🚜</div>
+              <h3 style={{
+                fontSize: '2rem',
+                color: '#2c3e50',
+                marginBottom: '16px',
+                fontWeight: 'bold'
+              }}>
+                Farming Life
+              </h3>
+              <p style={{
+                fontSize: '1.1rem',
+                color: '#666',
+                lineHeight: '1.6',
+                marginBottom: '24px'
+              }}>
+                Build your dream farm! Plant crops, raise animals, and create your agricultural empire.
+                Experience the complete farming life with realistic farming mechanics and endless possibilities.
+              </p>
+              <a
+                href="/farming-life"
+                style={{
+                  display: 'inline-block',
+                  padding: '12px 32px',
+                  backgroundColor: '#27ae60',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: '8px',
+                  fontSize: '1.1rem',
+                  fontWeight: '600',
+                  transition: 'background-color 0.2s ease',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                }}
+              >
+                Play Farming Life →
+              </a>
             </div>
           </Container>
         </div>
@@ -217,6 +292,8 @@ const GrowGardenHomePage: React.FC = () => {
             </div>
           </Container>
         </div>
+
+        
 
         {/* FAQ Section */}
         <div className="faq-section" style={{
