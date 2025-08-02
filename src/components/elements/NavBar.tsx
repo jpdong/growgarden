@@ -15,6 +15,7 @@ const NavBar: React.FC = () => (
         <nav>
           <ul className="nav">
             <li><Link href="/">Home</Link></li>
+            <li><Link href="/farming-life">Farming Life</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -44,6 +45,7 @@ const NavBar: React.FC = () => (
       </div>
       <ul>
         <li><Link href="/">Home</Link></li>
+        <li><Link href="/farming-life">Farming Life</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
     </nav>

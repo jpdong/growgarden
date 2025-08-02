@@ -12,9 +12,26 @@ export const featuredGame: Game = {
   category: GameCategory.GARDEN,
   tags: ['gardening', 'relaxing', 'simulation', 'plants', 'nature'],
   featured: true,
-  thumbnailUrl:"",
+  thumbnailUrl: '/logo512.png',
   seoSlug: 'grow-garden',
   metaDescription: 'Play Grow Garden online - a relaxing gardening simulation game where you plant, grow, and manage your own beautiful virtual garden.',
+};
+
+/**
+ * Farming Life game configuration
+ */
+export const farmingLifeGame: Game = {
+  id: 'farming-life',
+  title: 'Farming Life',
+  description: 'Build your dream farm! Plant crops, raise animals, and create your agricultural empire.',
+  longDescription: 'Experience the joy of farming life! Plant and harvest crops, raise livestock, build farm structures, and manage your agricultural business. Create the farm of your dreams in this immersive farming simulation game.',
+  iframeUrl: 'https://html5.gamemonetize.co/q8w2r79771yeqx2v37xqdqwn9oh0bkmo/',
+  thumbnailUrl: '/logo512.png',
+  category: GameCategory.STRATEGY,
+  tags: ['farming', 'agriculture', 'simulation', 'animals', 'crops', 'business'],
+  featured: true,
+  seoSlug: 'farming-life',
+  metaDescription: 'Play Farming Life online - build your dream farm, plant crops, raise animals, and create your agricultural empire in this farming simulation game.',
 };
 
 /**
@@ -104,7 +121,7 @@ export const moreGardenGames: Game[] = [
 /**
  * All games collection (featured + more games)
  */
-export const allGames: Game[] = [featuredGame, ...moreGardenGames];
+export const allGames: Game[] = [featuredGame, farmingLifeGame, ...moreGardenGames];
 
 /**
  * Get game by ID

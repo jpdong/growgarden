@@ -1291,8 +1291,6 @@ body {
 }
 
 .featured-game-iframe {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
   overflow: hidden;
 }
 
