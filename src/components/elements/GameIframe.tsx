@@ -159,12 +159,6 @@ const GameIframe = forwardRef<GameIframeRef, GameIframeProps>(({
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
           />
 
-          {/* Loading indicator */}
-          <div style={loadingStyle}>
-            <div style={spinnerStyle}></div>
-            <p>Loading {title}...</p>
-          </div>
-
           {/* Error state */}
           <div style={errorStyle}>
             <div style={{ fontSize: '48px', marginBottom: '8px' }}>🎮</div>
